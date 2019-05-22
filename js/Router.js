@@ -16,7 +16,7 @@ class Router {
     // AJAX request
     async getUsersData() {
         const promise = await fetch(`${this.url}?results=${this.results}&nat=${this.nat}&inc=${this.inc}`)
-                              .catch(err => onGetUsersFiled(err));
+                              .catch(err => this.onGetUsersFiled(err));
         const answer  = await promise.json();
         if (answer && answer.info && answer.results){
             return answer;
