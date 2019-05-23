@@ -1,7 +1,7 @@
 class PageManager {
 
-   constructor() {
-      this.userlist;
+   constructor(options) {
+      this.userlist = options.data.results;
       this.sortState = 'up';
       // userlist sorter button
       this.listsorterElement = document.querySelector('.list_sorter');

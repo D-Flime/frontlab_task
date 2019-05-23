@@ -93,11 +93,6 @@ content {
     cursor: pointer;
 }
 
-.user_profile_closer img{
-    width: 25px;
-    height: 25px;
-}
-
 .user_avatar {
     position: relative;
     float: left;
@@ -128,6 +123,7 @@ content {
     margin-right: auto;
     left: 0;
     right: 0;
+    box-sizing: border-box;    
     border: 2px solid #454a57;
     background: url("img/user_page_block_bg.jpg");
 }
@@ -192,4 +188,38 @@ content {
 .user_profile_phone::before {
     content: "Phone number: ";
     color: #ffffff;
+}
+
+.user_profile_closer img{
+    width: 25px;
+    height: 25px;
+}
+
+@media screen and (max-width: 910px) {
+    
+    .list_sorter {
+        width: 100%;
+    }
+
+    .user_list {
+        width: 100%;
+    }
+    
+    .user_block {
+        width: 100%;
+        margin-right: 0;
+    }
+
+}
+
+@media screen and (max-width: 504px) {
+
+    .user_profile_block {
+        width: 100%;
+    }
+
+    .user_profile_name {
+        overflow: visible;
+        white-space: normal;
+    }
 }

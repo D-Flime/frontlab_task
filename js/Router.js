@@ -1,11 +1,11 @@
 class Router {
 
     // INIT SETTINGS
-    constructor() {
-        this.url = `https://api.randomuser.me/1.0/`;
-        this.results = 50;
-        this.nat = `gb,us`;
-        this.inc = `gender,name,location,email,phone,picture`;
+    constructor(options) {
+        this.url = options.url;
+        this.results = options.results;
+        this.nat = options.nat;
+        this.inc = options.inc;
     }
 
     // get users request failed function handler

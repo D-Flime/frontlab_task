@@ -1,15 +1,13 @@
-window.onload = () => {
+window.onload = async () => {
 
-    const router = new Router();
-    const pageManager = new PageManager();
+    const router = new Router({
+        url: `https://api.randomuser.me/1.0/`,
+        results: 50,
+        nat: `gb,us`,
+        inc: `gender,name,location,email,phone,picture`
+    });
+    
+    const pageManager = new PageManager({ data: await router.getUsersData() });
 
-    var data;
-
-    async function init() {
-        data = await router.getUsersData();
-        pageManager.userlist = data.results;
-        pageManager.sortUserlist(data.results);
-    }
-    init();
-
+    pageManager.sortUserlist();
 }
