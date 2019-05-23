@@ -8,9 +8,9 @@ class Router {
         this.inc = `gender,name,location,email,phone,picture`;
     }
 
-    // AJAX success function handler
+    // get users request failed function handler
     onGetUsersFiled(err) {
-        console.log('Filed to get users data' + err);
+        console.log('Filed to get users data: ' + err);
     }
 
     // AJAX request
