@@ -218,8 +218,9 @@ content {
         width: 100%;
     }
 
-    .user_profile_name {
+    .user_profile_name, .user_profile_email, .user_profile_phone {
         overflow: visible;
         white-space: normal;
     }
+
 }
